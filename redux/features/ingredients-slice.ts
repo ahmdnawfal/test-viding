@@ -36,8 +36,15 @@ export const ingredientsSlice = createSlice({
     onEdit: (state, action: PayloadAction<boolean>) => {
       state.isEdit = action.payload;
     },
+    deleteDefaultValue: (state) => {
+      state.defaultValue = {
+        measure: '',
+        ingredients: '',
+      };
+    },
   },
 });
 
-export const { addDefaultValue, onEdit } = ingredientsSlice.actions;
+export const { addDefaultValue, onEdit, deleteDefaultValue } =
+  ingredientsSlice.actions;
 export default ingredientsSlice.reducer;

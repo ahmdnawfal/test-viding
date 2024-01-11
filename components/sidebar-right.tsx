@@ -3,6 +3,7 @@
 import {
   Tingredients,
   addDefaultValue,
+  deleteDefaultValue,
   onEdit,
 } from '@/redux/features/ingredients-slice';
 import {
@@ -72,7 +73,7 @@ const SidebarRight = () => {
   };
 
   const onDelete = () => {
-    dispatch(addDefaultValue({ measure: '', ingredients: '' } as Tingredients));
+    dispatch(deleteDefaultValue());
     dispatch(deleteInstructions());
   };
 
